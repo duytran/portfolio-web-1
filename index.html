@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <link
+      rel="stylesheet"
+      href="assets/vendors/glightbox/css/glightbox.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
@@ -88,9 +92,15 @@
               />
               <a
                 href="#"
-                class="position-absolute top-50 start-50 translate-middle"
+                class="glightbox position-absolute top-50 start-50 translate-middle"
               >
                 <span><i class="fas fa-play-circle"></i></span>
+                <span
+                  class="border-animation border-animation--border-1"
+                ></span>
+                <span
+                  class="border-animation border-animation--border-2"
+                ></span>
               </a>
             </div>
           </div>
@@ -105,6 +115,17 @@
       </svg>
     </section>
 
+    <script src="assets/vendors/glightbox/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      const lightbox = GLightbox({
+        touchNavigation: true,
+        href: "https://www.youtube.com/watch?v=J9lS14nM1xg",
+        type: "video",
+        source: "youtube", //vimeo, youtube or local
+        width: 900,
+        autoPlayVideos: "true",
+      });
+    </script>
     <script src="assets/js/bootstrap.bundle.js"></script>
   </body>
 </html>
